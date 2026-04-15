@@ -21,7 +21,7 @@ class Exercise(db.Model):
         cascade='all, delete-orphan'
     )
  
-    # Shortcut relationship — jump straight from Exercise to Workouts without manually going through the join table every time.
+    # Shortcut relationship jump straight from Exercise to Workouts without manually going through the join table every time.
     workouts = db.relationship(
         'Workout',
         secondary='workout_exercises',
